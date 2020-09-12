@@ -1,0 +1,9 @@
+#!/bin/bash
+set -o xtrace
+sudo apt update
+sudo apt-get -y install libncurses-dev flex bison openssl libssl-dev dkms libelf-dev libudev-dev libpci-dev libiberty-dev autoconf
+sudo add-apt-repository -s "deb http://us.ports.ubuntu.com/ubuntu-ports/ $(lsb_release -sc) main"
+sudo add-apt-repository -s "deb http://us.ports.ubuntu.com/ubuntu-ports/ $(lsb_release -sc)-updates main"
+sudo apt update
+sudo apt-get -y build-dep linux linux-image-$(uname -r)
+apt-get source linux-image-$(uname -r)
