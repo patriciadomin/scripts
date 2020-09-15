@@ -1,7 +1,7 @@
 #!/bin/bash
 set -o xtrace
 sudo apt update
-sudo apt-get -y install fakeroot libncurses-dev flex bison openssl libssl-dev dkms libelf-dev libudev-dev libpci-dev libiberty-dev autoconf
+sudo apt-get -y install fakeroot libncurses-dev flex bison openssl libssl-dev dkms libelf-dev libudev-dev libpci-dev libiberty-dev autoconf linux-tools-common
 sudo add-apt-repository -s "deb http://us.ports.ubuntu.com/ubuntu-ports/ $(lsb_release -sc) main"
 sudo add-apt-repository -s "deb http://us.ports.ubuntu.com/ubuntu-ports/ $(lsb_release -sc)-updates main"
 sudo apt update
