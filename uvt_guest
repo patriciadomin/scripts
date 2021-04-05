@@ -1,6 +1,11 @@
 #!/bin/bash
 # script para criar uma VM em ppc64le, aarch64(arm64) e x86_64(amd64)
 # via `uvt-kvm` - uvtool, precisa exportar as 2 variaveis `SERIES` e `VM_NAME`
+# cuidar quantidade de disco, especialmente CPU e memoria
+# eu uso para servidores como ~:
+# Mem: 255Gi (total)
+# CPU(s): 160
+# CPU(s): 224 :)
 set -o xtrace
 echo " ~Install uvtool"
 sudo apt update
