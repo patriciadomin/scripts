@@ -4,7 +4,7 @@ echo " ~Install uvtool"
 sudo apt update
 sudo apt install -y uvtool
 echo "~ export SERIES and a VM_NAME"
-echo "\n\non POWER8 host check if SMT is OFF 'ppc64_cpu --smt=off' "
+echo -e "\n ~~ On POWER8 host check if SMT is OFF 'ppc64_cpu --smt=off' \n"
 sudo uvt-simplestreams-libvirt sync --source  http://cloud-images.ubuntu.com/daily arch=$(dpkg --print-architecture) label=daily release=$SERIES
 # on POWER: 
 #  1) `arch` and `uname -m` will give `ppc64le`; 
